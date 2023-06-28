@@ -1,0 +1,198 @@
+@font-face {
+    font-family: Bebas;
+    src: url(BebasNeue-Regular.otf);
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(OpenSans-ExtraBold.ttf);
+}
+
+div.row{
+    margin: 0px;
+}
+
+body{
+    background-color: #0071B9; 
+    padding-right: 0px !important;
+}
+
+.container-fluid{ 
+    background-color: #0071B9; 
+    font-family: Bebas;
+    padding: 0px !important;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.titulo{
+    display:flex;
+    justify-content: center;
+    position: relative;
+}
+
+#titulo{
+    font-family: Bebas;
+    font-size: 2.8vw;
+    color: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0071B9;
+    margin: 0px;
+    padding: 0px;
+    min-height: 8vh;
+    height: 8vh;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#mini-paineis{
+    margin-top: 0.5vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-bottom: 4vw;
+    justify-content: center;
+}
+
+#mini-paineis.row .mini-painel{
+    margin: 15px !important;
+    background-color: white;
+    margin-top: 20px;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: white;
+    min-width: 123px;
+    min-height: 123px;
+    width: 9vw;
+    height: 9vw;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+
+}  
+
+#mini-paineis.row header{
+    margin-top: 25px;
+    font-size: 2vw;
+    color: white;
+}  
+
+.risco{
+    height: 80%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 0.1vh;
+    width: 0.8vh;
+    background-color: #0071B9;
+    position: absolute;
+}
+
+.pos-dados{
+    font-family: OpenSans;
+    font-size: 3.5vw;
+    width: 80%;
+    margin-left: 13%;
+    margin-right: 7%;
+    text-align: center;
+    color: #0071B9;
+    margin-top: 18%;
+    margin-bottom: 0;
+}
+
+.sub-titulo{
+    margin-top: -5%;
+    color: #3D3C3C;
+    font-size: 1.5vw;
+    width: 80%;
+    margin-left: 14%;
+    margin-right: 6%;
+    text-align: center;
+}
+
+#paineis-gerais.row{
+    margin-top: 3vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    justify-content: center;
+}
+
+.row .painel-geral{ 
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin-top: 20px;
+    margin: 0.5vw;
+
+    min-width: 359.953px;
+    min-height: 273.398px;
+    width: 28vw;
+    height: 20vw;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+
+    border-color: #0071B9;
+    border-radius: 4px;
+    border-style: solid;
+}
+
+.painel-geral h1{
+    margin-top: 30%;
+    margin-bottom: 30%;
+}
+
+.painel-geral header{
+    margin-top: -3.4vw;
+    font-size: 2vw;
+    color: white;
+}
+
+.d-block{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25%;
+    margin-bottom: 25%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.row footer{
+    font-family: OpenSans;
+    color: white;
+    margin-top: 5vw;
+    border-style: inset;
+    border-color: #0067A8;
+    background-color: #0067A8;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#sobre-o-site{
+    text-align: center;
+    font-size: 15px;
+}
+
+@media (max-width: 1365px) {
+    .sub-titulo {
+      font-size: 20.475px;
+      margin: -4.64062px 5.57812px 0px 13.0156px;
+    }
+    .pos-dados {
+        font-size: 47.775px;
+        margin: 16.7344px 6.5px 0px 12.0781px;
+    }
+    .painel-geral header{
+        font-size: 28px;
+        margin-top: -46.41px;
+    }
+    #mini-paineis.row header{
+        font-size: 28px;
+    }
+    .row .painel-geral{
+        margin-bottom: 50px;
+    }
+    #titulo{
+        font-size: 38.22px;
+    }
+  }

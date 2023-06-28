@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Suporte</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap/bootstrap.min.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/LR.ico') }}" />
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row" >
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding: 0px !important;">
+                <div class="principal"></div>
+                <header id="titulo"><span onclick="location.reload();" style="cursor: pointer;">DASHBOARD SUPORTE</span></header>
+            </div>
+        </div>
+        <div class="row" id="mini-paineis" style="margin-bottom: 0.5vw !important;">
+            
+                <header class="titulo">PÓS ATENDIMENTOS</header>
+                <div class="mini-painel">
+                    <div class="risco"></div>
+                    <h1 class="pos-dados" id="em_aberto_total">00</h1>
+                    <div class="sub-titulo">TOTAL</div>
+                </div>
+                <div class="mini-painel">
+                    <div class="risco"></div>
+                    <h1 class="pos-dados" id="vencidos">00</h1>
+                    <div class="sub-titulo">VENCIDOS</div>
+                </div>
+                <div class="mini-painel">
+                    <div class="risco"></div>
+                    <h1 class="pos-dados" id="assumidos">00</h1>
+                    <div class="sub-titulo">ASSUMIDOS</div>
+                </div>
+                <div class="mini-painel">
+                    <div class="risco"></div>
+                    <h1 class="pos-dados" id="criticos">00</h1>
+                    <div class="sub-titulo">CRÍTICOS</div>
+                </div>
+                <div class="mini-painel">
+                    <div class="risco"></div>
+                    <h1 class="pos-dados" id="finalizados_total">00</h1>
+                    <div class="sub-titulo">FINALIZADOS</div>
+                </div>
+
+        </div>
+        <div class="row" id="mini-paineis">
+            <header class="titulo">CLIENTES SEM ACESSO</header>
+            <div class="mini-painel">
+                <div class="risco"></div>
+                <h1 class="pos-dados" id="sem-acesso-kdm">00</h1>
+                <div class="sub-titulo">OFF KDM</div>
+            </div>
+                <div class="mini-painel">
+                <div class="risco"></div>
+                <h1 class="pos-dados" id="sem-acesso-tele">00</h1>
+                <div class="sub-titulo">OFF TELE</div>
+            </div>
+        </div>
+        <div class="row" >
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="row" id="paineis-gerais"> 
+                    <div class="painel-geral">
+                        <header>TOP ATENDIMENTOS MENSAL</header>
+                        <h1>EM BREVE!</h1>
+                    </div>
+                    <div class="painel-geral">
+                        <header><a href="https://downdetector.com.br/" target="_blank"><span style="color: red;">DOWN</span><span style="color: black;">DETECTOR</span></a></header>
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img class="d-block" src="{{ url_for('static', filename='images/Instagram_Logo_Large.png') }}" alt="Instagram">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block" src="{{ url_for('static', filename='images/Steam-Logo.png') }}" alt="Steam">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block" src="{{ url_for('static', filename='images/VIVO-logo.png') }}" alt="Vivo">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block" src="{{ url_for('static', filename='images/whatsapp-messenger.png') }}" alt="Whatsapp">
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="painel-geral">
+                        <header>TOP ATENDIMENTO DIÁRIO</header>
+                        <h1>EM BREVE!</h1>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <footer>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"  id="sobre-o-site">O site tem como objetivo monitorar o desempenho da equipe de suporte da empresa, permitindo o acompanhamento em tempo real das informações com a utilização de webscrapping e requisições via api.</div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="text-align: center;">DESENVOLVIDO POR LUIS RESENDE, TODOS OS DIREITOS RESERVADOS</div>
+            </footer>
+        </div>
+    </div>
+    <script>
+        var elementosPOS = ['em_aberto_total', 'vencidos', 'assumidos', 'criticos', 'finalizados_total', 'sem-acesso-kdm', 'sem-acesso-tele'];
+        var coresPOS = ['#0071B9', '{{ cor_vencido }}', '{{ cor_assumido }}', '{{ cor_critico }}', '#0071B9'];
+        var numerosPOS = ['{{ em_aberto_total }}', '{{ vencidos }}', '{{ assumidos }}', '{{ criticos }}', '{{ finalizados_total }}', '{{ sem_acesso_kdm }}', '{{ sem_acesso_tele }}'];
+    </script>
+    
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/atualizar_dados.js') }}"></script>
+
+</body>
+</html>
